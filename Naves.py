@@ -1,33 +1,39 @@
-menu = """
-Hola, bienvenido!
+def mostrar_menu():
+ menu = """
+    Hola, bienvenido/a!
 
-Este es el sistema de clasificacion de naves espaciales, a continuacion encontraras 4 tipos de naves espaciales
+    Este es el sistema de clasificación de naves espaciales, a continuación encontrarás 4 tipos de naves espaciales:
 
-1 - Nave lanzadera
-2 - Nave no tripulada
-3 - Nave tripulada
-4 - Nave tripulada (Dragon)
+    1 - Nave lanzadera
+    2 - Nave no tripulada
+    3 - Nave tripulada
+    4 - Nave tripulada (Dragon)
 
-Que nave espacial deseas investigar?
+    ¿Qué nave espacial deseas investigar?
+    """
+ return int(input(menu))
 
-"""
-
+def mostrar_submenu(opciones):
+    print("\nOpciones disponibles:")
+    for key, value in opciones.items():
+        print(f"{key} - {value['titulo']}")
+    return int(input("\n¿Qué deseas investigar? "))
 
 answer1 = """
-Seleccionaste Nave Lanzadera!
+    Seleccionaste Nave Lanzadera!
 
-Vaya, esta nave como su propio nombre indica, 
-se trata de un cohete autopropulsado que sirve 
-para lanzar una carga útil al espacio, normalmente 
-un satélite artificial, una sonda o una nave tripulada.
+    Vaya, esta nave como su propio nombre indica, 
+    se trata de un cohete autopropulsado que sirve 
+    para lanzar una carga útil al espacio, normalmente 
+    un satélite artificial, una sonda o una nave tripulada.
 
-Hay tres cosas que investigar de esta Nave Lanzadera
+    Hay tres cosas que investigar de esta Nave Lanzadera
 
-1- Potencia
-2- Capacidad
-3- Actualidad
+    1- Potencia
+    2- Capacidad
+    3- Actualidad
 
-Que deseas investigar?
+    Que deseas investigar?
 
 """
 answer1_1 = """
