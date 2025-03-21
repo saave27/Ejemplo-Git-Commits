@@ -19,21 +19,17 @@ def mostrar_submenu(opciones):
         print(f"{key} - {value['titulo']}")
     return int(input("\n¿Qué deseas investigar? "))
 
-answer1 = """
-    Seleccionaste Nave Lanzadera!
-
-    Vaya, esta nave como su propio nombre indica, 
-    se trata de un cohete autopropulsado que sirve 
-    para lanzar una carga útil al espacio, normalmente 
-    un satélite artificial, una sonda o una nave tripulada.
-
-    Hay tres cosas que investigar de esta Nave Lanzadera
-
-    1- Potencia
-    2- Capacidad
-    3- Actualidad
-
-    Que deseas investigar?
+def obtener_info_nave(nave, opciones):
+    print(f"\nSeleccionaste: {nave}\n")
+    try:
+        opcion = mostrar_submenu(opciones)
+        if opcion in opciones:
+            print(f"\n{opciones[opcion]['titulo']}:\n")
+            print(opciones[opcion]['descripcion'])
+        else:
+            print("\nOpción no válida.")
+    except ValueError:
+        print("\nPor favor, ingresa un número válido.")
 
 """
 answer1_1 = """
